@@ -1,0 +1,211 @@
+<html lang="en"><head>
+
+    <meta charset="UTF-8">
+    
+  <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+  <meta name="apple-mobile-web-app-title" content="CodePen">
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  
+  <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  
+  
+    <title>Heart Disease Prediction</title>
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+  <style>
+  /* nav  */
+  nav {
+    text-align: center;
+    }
+  .me-4{
+    margin-right: 40px;
+  }
+  header {
+    min-height: 100px;
+    background-color: hsl(250, 30%, 96%); /* gray */
+  }
+  
+  main {
+    min-height: 100vh;
+    color: rgb(10, 1, 1);
+    background-color: #afb4b1; /* gray */
+  }
+  footer {
+    min-height: 100px;
+    color: rgb(10, 1, 1);
+    background-color: #e6ebe8; /* gray */
+  }
+  
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+  .container-fluid .row {
+    margin: 0;
+    padding: 0;
+  }
+  p{
+    margin-top: 2ch;
+    margin-left: 10px;
+    padding-top: 0ch;
+  }
+  .homepage-jumbotron{
+    margin-top: 100px;
+  }
+  .img{
+    float: left;
+    margin-top: 40px;
+  }
+  .me-4{
+    margin-right: 40px;
+  }
+  .navigation{
+                color: white;
+                font-weight: 500;
+                font-size: 24px;
+            }
+  
+  /*
+  *
+  * ==========================================
+  * CUSTOM UTIL CLASSES
+  * ==========================================
+  *
+  */
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+  
+  .megamenu {
+    position: static;
+  }
+  .megamenu .dropdown-menu {
+    border: none;
+    width: 100%;
+  }
+  .button {
+    border: none;
+    color: rgb(238, 232, 232);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .button1 {background-color: #181a19;} /* gray */
+  .probootstrap-form {
+    padding: 40px;
+    background: rgb(216, 204, 204);
+    margin-bottom: 50px;
+}
+.probootstrap-form {
+  padding: 15px;
+}
+.probootstrap-form, .probootstrap-shadow, .probootstrap-testimonial:focus, .probootstrap-testimonial:hover {
+  -webkit-box-shadow: 0 20px 45px -10px rgba(3, 3, 3, 0.15);
+  box-shadow: 0 20px 45px -10px rgba(15, 0, 0, 0.15);
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+form {
+  display: block;
+  margin-top: 0.5em;
+}
+.col-md-6 {
+  display: block;
+  margin-top: 3em;
+  line-break: auto;
+
+}
+  </style>
+  
+    <script>
+    window.console = window.console || function(t) {};
+    </script>
+    
+    
+    <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+  
+  
+  </head>
+  
+  <body translate="no">
+    <py-script src="app.py">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm fixed-top">
+        <img src="https://www.heart.org/-/media/Images/Logos/Global-Do-No-Edit/Header/AHA_icon.svg?h=256&w=200&hash=27A6F1B73E457C1C6E045A3B0CA90225" height="55px" width="55px" width="8%" ><span class="navigation" style="margin-left: 20px;">Heart Care Center</span> 
+        <div id="navbarContent" class="collapse navbar-collapse order-sm-12 order-lg-1">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="Home.html" class="nav-link me-4 font-weight-bold text-uppercase">HOME</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link me-4 font-weight-bold text-uppercase" >ABOUT US</a></li>
+          <li class="nav-item"><a href="helpline.html" class="nav-link me-4 font-weight-bold text-uppercase">HELPLINE</a></li>
+          <li class="nav-item"><a href="predict.html" class="nav-link me-4 font-weight-bold text-uppercase">PREDICTOR</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link font-weight-bold text-uppercase">CONTACT</a></li>
+        </ul>
+      </div>  
+      
+    </nav>
+        
+  </nav>
+  <header>
+  
+  </header>
+  <main>
+    <section class="probootstrap-section probootstrap-bg-light" data-section="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <form action="index.py" class="probootstrap-form" method="post">
+              <h2 class="text-black mt0">Get In Touch</h2>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name" id="Name">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your Email" id="Email">
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="Your Phone" id="Phone">
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="prediction rate" id="Rate">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control"cols="30" rows="10" placeholder="Write a Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Send Message" id="Message">
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-md-push-1">
+            <ul class="probootstrap-contact-details">
+              <li>
+                <span class="text-uppercase">Heart Disease Helpline: Heart Disease Support <br><span class="icon icon-email"></span></span><br>
+                Heart disease causes more death than any disease in both men and women in the United States. Heart disease is used as an umbrella term to describe a variety of conditions that affect your heart. <br>
+                Seeking out a heart disease helpline can be essential to managing your or your loved one's condition. However, many find this to be a challenging step to take. But you are not alone and there is plenty of help available. The The Caregiver Hub community will enable you to connect with actual people who face the same everyday experiences and challenges. The Caregiver Hub is completely free and is packed full of stories, friendly advice, and resources that can help you feel part of a positive heart disease community.
+               </li>
+            </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</py-script>
+  
+    
+  
+  
+  
+  
+   
+  </body></html>
