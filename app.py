@@ -7,7 +7,7 @@ import numpy as np
 app = Flask(__name__)
 
 app.config["SECRET_KEY"] = 'abd3e6fb8a9854dd92a30cfc6dab510d'
-clf =  joblib.load(r'E:\Flask\heart_log_regr.sav')
+clf =  joblib.load(r'C:\Users\Niranjan\Desktop\CSE\Projects\Heart Disease Prediction\heart_log_regr.sav')
 
 # linking of html pages
 @app.route('/')
